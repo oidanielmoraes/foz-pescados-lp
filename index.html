@@ -432,7 +432,7 @@
     }
 
     .portfolio__card-body {
-      padding: var(--space-24) var(--space-24) var(--space-32);
+      padding: var(--space-24) var(--space-24) var(--space-24);
       display: flex;
       flex-direction: column;
       flex: 1;
@@ -451,7 +451,30 @@
       font-weight: 400;
       color: rgba(255, 250, 240, 0.55);
       line-height: 1.65;
-      flex: 1;
+    }
+
+    .portfolio__card-tags {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-end;
+      gap: 8px 16px;
+      padding: var(--space-16) var(--space-24) var(--space-32);
+    }
+
+    .portfolio__tag {
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: rgba(255, 250, 240, 0.5);
+      border: none;
+      border-bottom: 1px solid rgba(255, 250, 240, 0.25);
+      padding: 0 0 4px;
+    }
+
+    .portfolio__tag--highlight {
+      color: var(--color-yellow);
+      border-bottom-color: rgba(239, 166, 37, 0.5);
     }
 
     .portfolio__footer {
@@ -1008,7 +1031,7 @@
         <div class="hero__content">
           <p class="eyebrow eyebrow--light hero__eyebrow">Foz Pescados — Curadoria de Pescados</p>
           <h1 class="hero__headline">
-            O melhor dos mares e rios do Brasil, na bancada da sua cozinha.
+            Os melhores peixes e frutos do mar do Brasil, selecionados para a sua cozinha.
           </h1>
           <p class="hero__body">
             Sua cozinha tem acesso direto às melhores indústrias de pescados do Brasil — produtos escolhidos com critério, com origem rastreável, entregues com logística precisa e suporte presente depois da venda.
@@ -1055,12 +1078,12 @@
     <section class="portfolio section" id="portfolio" aria-labelledby="portfolio-headline">
       <div class="container">
         <div class="portfolio__header" data-reveal>
-          <p class="eyebrow portfolio__eyebrow">O que sua cozinha encontra aqui</p>
+          <p class="eyebrow portfolio__eyebrow">Portfólio selecionado</p>
           <h2 class="portfolio__headline" id="portfolio-headline">
-            Do fundo dos rios à tona do oceano.
+            O melhor dos rios e mares brasileiros.
           </h2>
           <p class="portfolio__subheadline">
-            Do clássico ao especial — tudo com a mesma exigência de origem e qualidade que o seu cardápio merece.
+            Dos clássicos aos cortes especiais, reunimos peixes e frutos do mar de origem rastreável para atender cozinhas de alto padrão.
           </p>
         </div>
 
@@ -1078,6 +1101,11 @@
                 Pirarucu, tambaqui, atum, pescada amarela, tilápia, namorada e cação. Frescos e congelados, com cortes especificados conforme a necessidade da sua cozinha.
               </p>
             </div>
+            <div class="portfolio__card-tags">
+              <span class="portfolio__tag">Fresco</span>
+              <span class="portfolio__tag">Congelado</span>
+              <span class="portfolio__tag">Corte especial</span>
+            </div>
           </article>
 
           <article class="portfolio__card" data-reveal data-delay="120">
@@ -1091,6 +1119,12 @@
               <p class="portfolio__card-desc">
                 Camarão cinza, rosa e empanado. Selecionados por tamanho, calibre e procedência — para garantir o rendimento que o seu cardápio exige.
               </p>
+            </div>
+            <div class="portfolio__card-tags">
+              <span class="portfolio__tag">Congelado</span>
+              <span class="portfolio__tag">Empanado</span>
+              <span class="portfolio__tag">Por calibre</span>
+              <span class="portfolio__tag">Com ou sem casca</span>
             </div>
           </article>
 
@@ -1106,6 +1140,11 @@
                 Lula, polvo, ostras, mexilhões, vôngole e vieiras. Alta rotatividade no menu premium, com a consistência que você precisa para escalar sem surpresas.
               </p>
             </div>
+            <div class="portfolio__card-tags">
+              <span class="portfolio__tag">Fresco</span>
+              <span class="portfolio__tag">Congelado</span>
+              <span class="portfolio__tag">Limpo</span>
+            </div>
           </article>
 
           <article class="portfolio__card" data-reveal data-delay="0">
@@ -1120,6 +1159,12 @@
                 Lagostas e lagostins com rastreabilidade completa. Para as ocasiões em que o produto precisa ser impecável — e não há segunda chance.
               </p>
             </div>
+            <div class="portfolio__card-tags">
+              <span class="portfolio__tag">Fresco</span>
+              <span class="portfolio__tag">Congelado</span>
+              <span class="portfolio__tag portfolio__tag--highlight">Premium</span>
+              <span class="portfolio__tag">Rastreável</span>
+            </div>
           </article>
 
           <article class="portfolio__card" data-reveal data-delay="120">
@@ -1133,6 +1178,11 @@
               <p class="portfolio__card-desc">
                 Uma seleção sazonal de produtos especiais, para quando o cardápio pede algo além do padrão. Disponibilidade sob consulta.
               </p>
+            </div>
+            <div class="portfolio__card-tags">
+              <span class="portfolio__tag portfolio__tag--highlight">Premium</span>
+              <span class="portfolio__tag">Sob consulta</span>
+              <span class="portfolio__tag">Edição limitada</span>
             </div>
           </article>
 
@@ -1174,10 +1224,10 @@
         <div class="pillars__header" data-reveal>
           <p class="eyebrow eyebrow--light pillars__eyebrow">Para quem é a Foz</p>
           <h2 class="pillars__headline" id="pillars-headline">
-            Servimos quem leva o produto a sério.
+            Você sabe que bom prato começa com um bom ingrediente
           </h2>
           <p class="pillars__body">
-            A Foz não é para todo mundo — e isso é intencional. Trabalhamos com operações que dependem de consistência, rastreabilidade e um fornecedor que entende o que é estar por trás de um menu exigente.
+            Atendemos operações que valorizam procedência, regularidade e a tranquilidade de trabalhar com um fornecedor que entende as exigências do serviço profissional.
           </p>
         </div>
 
@@ -1317,10 +1367,10 @@
               Conhecemos e valorizamos pescados de Norte à Sul do Brasil.
             </h2>
             <p class="origin__body">
-              Gustavo Pedrosa passou mais de 15 anos no foodservice brasileiro — do operacional às decisões de compra. Esse tempo ensinou a reconhecer, na prática, quais indústrias entregam o que prometem e quais apenas parecem entregar.
+              Há mais de 15 anos no foodservice, Gustavo Pedrosa conhece a pressão de estar por trás de uma cozinha profissional. Sabe que um fornecedor não é avaliado pelo discurso, mas pela capacidade de entregar o mesmo padrão todos os dias.
             </p>
             <p class="origin__body">
-              Com esse conhecimento, percorreu as cinco regiões do país — do Nordeste à Amazônia, do Sul ao Sudeste — mapeando indústrias, visitando plantas, testando produtos. Selecionando não só pelo que chegava bom, mas pelo que chegava bom de forma repetida, ao longo do tempo.
+              Por isso, percorreu o Brasil em busca dos melhores produtores e indústrias do setor. Cada parceiro da Foz foi selecionado a partir de visitas, testes e uma análise criteriosa de qualidade, procedência e confiabilidade operacional.
             </p>
             <p class="origin__body" style="color:var(--text-muted);font-size:var(--text-body-sm);">
               O resultado desse trabalho chega diretamente à bancada da sua cozinha.
@@ -1352,7 +1402,7 @@
           <div class="contact__intro" data-reveal>
             <p class="eyebrow eyebrow--light contact__eyebrow">Solicitar catálogo</p>
             <h2 class="contact__headline" id="contact-headline">
-              Pronto para ter na sua cozinha pescados que chegam do jeito que você especificou?
+              Facilite sua operação, mantendo consistência e alta qualidade.
             </h2>
             <p class="contact__sub">
               Fale com a Foz. Sem compromisso — só a conversa certa para entender como podemos ajudar a sua operação.
