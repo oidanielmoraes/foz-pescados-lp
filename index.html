@@ -320,12 +320,10 @@
       content: '';
       position: absolute;
       inset: 0;
-      background: linear-gradient(
-        112deg,
-        rgba(5, 14, 30, 0.68) 0%,
-        rgba(5, 14, 30, 0.44) 44%,
-        rgba(5, 14, 30, 0.10) 100%
-      );
+      background: linear-gradient(112deg,
+          rgba(5, 14, 30, 0.68) 0%,
+          rgba(5, 14, 30, 0.44) 44%,
+          rgba(5, 14, 30, 0.10) 100%);
       z-index: 0;
     }
 
@@ -340,6 +338,9 @@
     .hero__inner {
       position: relative;
       z-index: 1;
+      flex: 1;
+      display: flex;
+      align-items: center;
       width: 100%;
       max-width: var(--container-max);
       margin-left: auto;
@@ -349,11 +350,10 @@
     }
 
     .hero__content {
-      flex: 1;
+      width: 100%;
       display: flex;
       flex-direction: column;
-      justify-content: center;
-      padding-top: var(--space-96);
+      padding-top: var(--space-64);
       padding-bottom: var(--space-64);
     }
 
@@ -362,17 +362,17 @@
     }
 
     .hero__headline {
-      font-size: clamp(2.5rem, 5vw, 4.25rem);
+      font-size: var(--text-display);
       font-weight: 300;
       color: var(--color-cream);
       line-height: 1.05;
       letter-spacing: -0.025em;
-      max-width: 17ch;
+      max-width: 22ch;
       margin-bottom: var(--space-32);
     }
 
     .hero__body {
-      font-size: var(--text-body);
+      font-size: var(--text-lead);
       font-weight: 400;
       color: rgba(255, 250, 240, 0.88);
       line-height: 1.7;
@@ -1513,17 +1513,17 @@
     <section class="hero" aria-label="Apresentação">
       <div class="hero__inner">
         <div class="hero__content">
-          <p class="eyebrow eyebrow--light hero__eyebrow">Foz Pescados — Curadoria de Pescados</p>
+          <p class="eyebrow eyebrow--light hero__eyebrow">Foz Pescados</p>
           <h1 class="hero__headline">
-            Os melhores peixes e frutos do mar do Brasil, selecionados para a sua cozinha.
+            Curadoria de pescados para cozinhas de alto padrão.
           </h1>
           <p class="hero__body">
-            Sua cozinha tem acesso direto às melhores indústrias de pescados do Brasil — produtos escolhidos com
-            critério, com origem rastreável, entregues com logística precisa e suporte presente depois da venda.
+            Acesso direto aos melhores fornecedores de peixes e frutos do mar do Brasil — com origem rastreável,
+            logística precisa e suporte depois da venda.
           </p>
           <div class="hero__actions">
             <a href="#contato" class="btn btn--outline-cream">
-              Solicitar catálogo
+              Falar com especialista
             </a>
             <p class="microcopy microcopy--light">Para cozinhas profissionais · Atendemos todo o Brasil</p>
           </div>
@@ -1583,8 +1583,8 @@
             <div class="portfolio__card-body">
               <h3 class="portfolio__card-title">Peixes</h3>
               <p class="portfolio__card-desc">
-                Pirarucu, tambaqui, atum, pescada amarela, tilápia, namorada e cação. Frescos e congelados, com cortes
-                especificados conforme a necessidade da sua cozinha.
+                Robalo, cação, bacalhau, pescada amarela, tilápia, pirarucu, tambaqui, atum e muito mais. Peixes frescos
+                e congelados, com cortes especificados conforme a necessidade da sua cozinha.
               </p>
             </div>
             <div class="portfolio__card-tags">
@@ -1622,14 +1622,14 @@
             <div class="portfolio__card-body">
               <h3 class="portfolio__card-title">Moluscos</h3>
               <p class="portfolio__card-desc">
-                Lula, polvo, ostras, mexilhões, vôngole e vieiras. Alta rotatividade no menu premium, com a consistência
-                que você precisa para escalar sem surpresas.
+                Lula, polvo, ostras, mexilhões, vôngole e vieiras. A consistência que você precisa para entregar pratos
+                surpreendentes.
               </p>
             </div>
             <div class="portfolio__card-tags">
-              <span class="portfolio__tag">Fresco</span>
               <span class="portfolio__tag">Congelado</span>
               <span class="portfolio__tag">Limpo</span>
+              <span class="portfolio__tag">À Granel</span>
             </div>
           </article>
 
@@ -1641,14 +1641,11 @@
             <div class="portfolio__card-body">
               <h3 class="portfolio__card-title">Crustáceos</h3>
               <p class="portfolio__card-desc">
-                Lagostas e lagostins com rastreabilidade completa. Para as ocasiões em que o produto precisa ser
-                impecável — e não há segunda chance.
+                Lagostas e lagostins com rastreabilidade e qualidade incontestável.
               </p>
             </div>
             <div class="portfolio__card-tags">
-              <span class="portfolio__tag">Fresco</span>
               <span class="portfolio__tag">Congelado</span>
-              <span class="portfolio__tag portfolio__tag--highlight">Premium</span>
               <span class="portfolio__tag">Rastreável</span>
             </div>
           </article>
@@ -1666,7 +1663,6 @@
               </p>
             </div>
             <div class="portfolio__card-tags">
-              <span class="portfolio__tag portfolio__tag--highlight">Premium</span>
               <span class="portfolio__tag">Sob consulta</span>
               <span class="portfolio__tag">Edição limitada</span>
             </div>
@@ -1721,33 +1717,29 @@
         <div class="pillars__grid">
           <div class="pillars__item" data-reveal data-delay="0">
             <i data-lucide="utensils" class="pillars__item-icon"></i>
-            <span class="pillars__item-tag">Restaurantes</span>
-            <h3 class="pillars__item-title">Restaurantes e Cozinhas Profissionais</h3>
+            <h3 class="pillars__item-title">Restaurantes</h3>
             <p class="pillars__item-body">
-              Chefs que não podem improvisar na bancada. Que precisam de corte específico, calibre garantido e entrega
-              que não desloca a mise en place do dia. A Foz funciona para quem monta cardápios sazonais e precisa que o
-              pescado chegue do jeito que foi especificado — sempre.
+              Chefs que precisam do mesmo padrão na décima entrega que teve na primeira e querem um fornecedor que não
+              some depois do pedido.
             </p>
           </div>
 
           <div class="pillars__item" data-reveal data-delay="160">
             <i data-lucide="building-2" class="pillars__item-icon"></i>
-            <span class="pillars__item-tag">Hotelaria</span>
             <h3 class="pillars__item-title">Hotelaria e Food &amp; Beverage</h3>
             <p class="pillars__item-body">
               Hotéis, resorts e operações de banquetes que trabalham com volume alto, múltiplos cortes e especificações
-              variadas ao mesmo tempo. Para quem precisa de um fornecedor que mantém o padrão independente da demanda —
-              e que escala junto com a operação.
+              variadas. Para quem precisa de um fornecedor que mantém o padrão independente da demanda e que escala
+              junto com a operação.
             </p>
           </div>
 
           <div class="pillars__item" data-reveal data-delay="320">
             <i data-lucide="truck" class="pillars__item-icon"></i>
-            <span class="pillars__item-tag">Distribuição</span>
             <h3 class="pillars__item-title">Importadores e Distribuidores</h3>
             <p class="pillars__item-body">
               Empresas que revendem para o mercado foodservice e precisam de parceiros com SIF, origem rastreável e
-              capacidade de atender volumes maiores com consistência. A Foz abastece quem abastece o mercado — com a
+              capacidade de atender volumes maiores com consistência. A Foz abastece quem abastece o mercado, com a
               mesma exigência de quem está na ponta do consumo.
             </p>
           </div>
@@ -1767,14 +1759,15 @@
 
             <blockquote class="testimonial__card">
               <p class="testimonial__text">
-                A Foz resolveu um problema que a gente tinha há anos: pirarucu e tambaqui chegando com o calibre que
-                especificamos, toda semana. Não é pouca coisa quando você tem um menu autoral que depende disso.
+                Mais do que as marcas, conheço bem a causa do bom pescado. De valorizar a pessoa que tá envolvida na
+                cadeia, de se aproximar dos chefs para entender as nossas necessidades e pela parceria na hora do vuco
+                vuco, quando tem um pedido de última hora.
               </p>
               <footer class="testimonial__author">
-                <div class="testimonial__photo" aria-hidden="true">RC</div>
+                <div class="testimonial__photo" aria-hidden="true">RO</div>
                 <div class="testimonial__info">
-                  <strong class="testimonial__name">Rafael Costa</strong>
-                  <span class="testimonial__role">Chef Executivo · Mocotó</span>
+                  <strong class="testimonial__name">Rodrigo Oliveira</strong>
+                  <span class="testimonial__role">Chef · Mocotó</span>
                 </div>
                 <img src="images/logo-parceiros/mocotó.svg" class="testimonial__logo" alt="Mocotó" loading="lazy">
               </footer>
@@ -1782,31 +1775,15 @@
 
             <blockquote class="testimonial__card">
               <p class="testimonial__text">
-                Volume alto, múltiplos cortes, entregas semanais. A Foz entrega o que combina. E quando surge qualquer
-                desvio, a comunicação já vem com a solução. Isso faz diferença num hotel.
+                &nbsp;
               </p>
               <footer class="testimonial__author">
-                <div class="testimonial__photo" aria-hidden="true">AV</div>
+                <div class="testimonial__photo" aria-hidden="true">AK</div>
                 <div class="testimonial__info">
-                  <strong class="testimonial__name">Ana Veiga</strong>
-                  <span class="testimonial__role">Gerente de F&amp;B · Hilton São Paulo</span>
+                  <strong class="testimonial__name">Adriano Kanashiro</strong>
+                  <span class="testimonial__role">Chef · Kureiji</span>
                 </div>
-                <img src="images/logo-parceiros/hilton.svg" class="testimonial__logo" alt="Hilton" loading="lazy">
-              </footer>
-            </blockquote>
-
-            <blockquote class="testimonial__card">
-              <p class="testimonial__text">
-                Dois anos de parceria. Nenhuma surpresa na entrega. O que mudou na nossa cozinha foi a previsibilidade —
-                saber que o produto vem como especificado deixa a equipe focada no que importa.
-              </p>
-              <footer class="testimonial__author">
-                <div class="testimonial__photo" aria-hidden="true">PT</div>
-                <div class="testimonial__info">
-                  <strong class="testimonial__name">Paulo Togni</strong>
-                  <span class="testimonial__role">Chef Proprietário · Jangada</span>
-                </div>
-                <img src="images/logo-parceiros/jangada.svg" class="testimonial__logo" alt="Jangada" loading="lazy">
+                <img src="images/logo-parceiros/kureiji.svg" class="testimonial__logo" alt="Kureiji" loading="lazy">
               </footer>
             </blockquote>
 
@@ -1819,7 +1796,6 @@
             <button class="testimonials__dot testimonials__dot--active" role="tab" aria-selected="true"
               aria-label="Depoimento 1"></button>
             <button class="testimonials__dot" role="tab" aria-selected="false" aria-label="Depoimento 2"></button>
-            <button class="testimonials__dot" role="tab" aria-selected="false" aria-label="Depoimento 3"></button>
           </div>
           <button class="testimonials__btn testimonials__btn--next" aria-label="Próximo depoimento">&#8594;</button>
         </div>
@@ -1861,12 +1837,12 @@
           <div class="origin__content" data-reveal="left">
             <p class="eyebrow origin__eyebrow" style="margin-bottom:1.5rem">Por trás da curadoria</p>
             <h2 class="origin__headline" id="origin-headline">
-              Conhecemos e valorizamos pescados de Norte à Sul do Brasil.
+              Conhecemos e valorizamos os pescados de Norte à Sul do Brasil.
             </h2>
             <p class="origin__body">
               Há mais de 15 anos no foodservice, Gustavo Pedrosa conhece a pressão de estar por trás de uma cozinha
               profissional. Sabe que um fornecedor não é avaliado pelo discurso, mas pela capacidade de entregar o mesmo
-              padrão todos os dias.
+              padrão em todos os pedidos.
             </p>
             <p class="origin__body">
               Por isso, percorreu o Brasil em busca dos melhores produtores e indústrias do setor. Cada parceiro da Foz
@@ -1904,7 +1880,7 @@
               Facilite sua operação, mantendo consistência e alta qualidade.
             </h2>
             <p class="contact__sub">
-              Fale com a Foz. Sem compromisso — só a conversa certa para entender como podemos ajudar a sua operação.
+              Fale com a Foz. Sem compromisso. Vamos conversar para entender como podemos ajudar a sua operação.
             </p>
           </div>
 
