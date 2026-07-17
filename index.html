@@ -2,6 +2,15 @@
 <html lang="pt-BR">
 
 <head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18327886668"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'AW-18327886668');
+  </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Foz Pescados — Fornecedor de Pescados para Foodservice, Restaurantes e Hotéis</title>
@@ -1931,7 +1940,7 @@
           </div>
 
           <div class="contact__form-card" data-reveal data-delay="200">
-            <form class="contact__form" action="https://formspree.io/f/xwvjnpjk" name="contato" method="POST" novalidate>
+            <form class="contact__form" id="form-contato" action="https://formspree.io/f/xwvjnpjk" name="contato" method="POST" novalidate>
               <input type="hidden" name="_subject" value="Novo lead — Foz Pescados">
               <input type="hidden" name="_replyto" value="">
               <input type="text" name="_gotcha" style="display:none">
@@ -2126,6 +2135,27 @@
         }, { threshold: 0.35 }).observe(credSec);
       }
     })();
+  </script>
+
+  <script>
+    document.getElementById('form-contato').addEventListener('submit', function (e) {
+      e.preventDefault();
+      var form = this;
+      var enviado = false;
+
+      function enviarFormulario() {
+        if (enviado) return;
+        enviado = true;
+        form.submit();
+      }
+
+      gtag('event', 'conversion', {
+        'send_to': 'AW-18327886668/S0hwCIbKidIcEMy2taNE',
+        'event_callback': enviarFormulario
+      });
+
+      setTimeout(enviarFormulario, 1000);
+    });
   </script>
 
 </body>
